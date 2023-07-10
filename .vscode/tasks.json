@@ -1,0 +1,19 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Cargo Watch Server",
+            "type": "shell",
+            "command": "cargo watch -q -c --no-gitignore -w server/ -x \"run --bin server -- --addr 0.0.0.0 --port 8080\"",
+            "problemMatcher": [],
+        },
+        {
+            "label": "Trunk Watch Client",
+            "type": "shell",
+            "command": "cd client && trunk watch",
+            "problemMatcher": [],
+        }
+    ]
+}

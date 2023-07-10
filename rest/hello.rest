@@ -1,0 +1,15 @@
+@hostname = localhost
+@port = 8080
+@host = {{hostname}}:{{port}}
+
+###
+GET http://{{host}}/
+
+###
+POST http://{{host}}/api/hello
+
+###
+GET http://{{host}}/api/hello/?name=World
+
+###
+GET http://{{host}}/api/hello/World
